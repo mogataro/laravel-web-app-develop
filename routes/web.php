@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('sample/events', 'Sample');
+Route::post('sample/events', 'Sample');
+Route::post('sample/events/deleat', 'SampleDeleat');

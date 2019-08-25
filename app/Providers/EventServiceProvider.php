@@ -18,6 +18,16 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+
+
+        //-------------------------------------------
+        // AccessDetectionイベントとMakeTextリスナを登録して、php artisan event:generateをする
+        //-------------------------------------------
+        // アクセス時にイベントを発行する側
+        'App\Events\AccessDetection' => [
+            // テキストを生成＆書き込みを行うリスナー側
+            'App\Listeners\MakeTextListener',
+        ]
     ];
 
     /**
