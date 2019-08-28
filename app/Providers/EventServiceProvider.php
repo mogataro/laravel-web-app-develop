@@ -27,6 +27,8 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\AccessDetection' => [
             // テキストを生成＆書き込みを行うリスナー側
             'App\Listeners\MakeTextListener',
+            // 非同期リスナー(キューに入れる)
+            'App\Listeners\MessageQueueSubscriber',
         ]
     ];
 

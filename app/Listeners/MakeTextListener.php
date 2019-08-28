@@ -8,6 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 
 class MakeTextListener
 {
+
     /**
      * Create the event listener.
      *
@@ -26,6 +27,7 @@ class MakeTextListener
      */
     public function handle(AccessDetection $event)
     {
+        \Log::info('同期リスナー発動!!!');
         // テキストファイル作成
         $file = sprintf('%s/%s.txt', storage_path('texts'), date('Ymd-His'));
         touch($file);// storage/texts/Ymd-His.txtを作成

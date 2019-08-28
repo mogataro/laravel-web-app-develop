@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('sample/events', 'Sample');
-Route::post('sample/events', 'Sample');
+Route::post('sample/events/queue', 'SampleQueueWork');
 Route::post('sample/events/deleat', 'SampleDeleat');
+Route::post('sample/events/log-deleat', 'SampleLogDeleat');

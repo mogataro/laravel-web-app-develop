@@ -36,4 +36,10 @@ class AccessDetection
     {
         return new PrivateChannel('channel-name');
     }
+
+    public function getValue() {
+        return $this->param;
+    }
+
+
 }
